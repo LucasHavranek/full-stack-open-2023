@@ -1,0 +1,14 @@
+Sequence Diagram
+    Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+    Server-->Browser: HTML Code
+    Browser->Server: https://studies.cs.helsinki.fi/exampleapp/main.css
+    Server-->Browser: main.css
+    Browser->Server: https://studies.cs.helsinki.fi/exampleapp/spa.js
+    Server-->Browser: spa.js
+    Browser: User input information on textArea and click on save
+    Browser->> Send given information form to server with a POST request
+    Browser->> request data from json file on server, running spa.js
+    Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    Server-->Browser: [{"content":"j","date":"2022-02-16T14:43:04.180Z"}]
+    Browser--> event handler run and redrawNotes render new note os screen
+

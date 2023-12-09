@@ -1,0 +1,11 @@
+Sequence Diagram
+    Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+    Server-->Browser: HTML Code
+    Browser->Server: https://studies.cs.helsinki.fi/exampleapp/main.css
+    Server-->Browser: main.css
+    Browser->Server: https://studies.cs.helsinki.fi/exampleapp/spa.js
+    Server-->Browser: spa.js
+    Browser->> request data from json file on server, running spa.js
+    Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    Server-->Browser: json data is given 
+    Browser--> run callback function
